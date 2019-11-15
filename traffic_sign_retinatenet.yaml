@@ -1,0 +1,10 @@
+#retinanet.yaml
+type: 'retinanet'
+train:
+      checkpoint:
+           path: gs://cloud-tpu-artifacts/resnet/resnet-nhwc-2018-10-14/model.ckpt-112602
+           prefix: resnet50/
+      train_file_pattern: gs://retinanet-test/trafficsigns/train.record
+eval:
+      eval_file_pattern: gs://retinanet-test/trafficsigns/trafficsigns/eval.record
+      val_json_file:  gs://retinanet-test/trafficsigns/val_json.json
